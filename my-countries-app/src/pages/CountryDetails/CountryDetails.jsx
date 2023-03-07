@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BackButton from "../../components/BackButton/BackButton";
+import { DarkModeContext } from "../../context/ThemeContext.context";
 import styles from "./CountryDetails.module.css";
 
 const CountryDetails = () => {
+  const { currentTheme } = useContext(DarkModeContext);
   const { countryName } = useParams();
   const [countryDetails, setCountryDetails] = useState([]);
 
@@ -16,7 +18,12 @@ const CountryDetails = () => {
   }, [countryName]);
 
   return countryDetails ? (
-    <>
+    <div
+      style={{
+        backgroundColor: currentTheme.background,
+        color: currentTheme.foreground,
+      }}
+    >
       <BackButton />
       <div className={styles.wrapper}>
         <div className={styles.imageBox}>
@@ -46,7 +53,7 @@ const CountryDetails = () => {
           })}
         </div>
       </div>
-    </>
+    </div>
   ) : (
     <h3>There is no country like this:(</h3>
   );

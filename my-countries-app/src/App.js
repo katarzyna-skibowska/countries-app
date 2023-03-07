@@ -2,11 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CountriesList from "./pages/CountriesList/CountriesList";
 import CountryDetails from "./pages/CountryDetails/CountryDetails";
 import Layout from "./components/Layout";
-import { ThemeProvider } from "./context/ThemeContext.context";
+import { DarkModeContextProvider } from "./context/ThemeContext.context";
 
 function App() {
   return (
-    <ThemeProvider>
+    <DarkModeContextProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -15,7 +15,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </ThemeProvider>
+    </DarkModeContextProvider>
   );
 }
 

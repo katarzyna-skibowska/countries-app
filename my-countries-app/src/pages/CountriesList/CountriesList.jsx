@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../context/ThemeContext.context";
 import styles from "./CountriesList.module.css";
 
 const CountriesList = () => {
+  const { currentTheme } = useContext(DarkModeContext);
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -19,7 +21,13 @@ const CountriesList = () => {
   return countries.map((country) => {
     return (
       <Link to={country.name} key={country.name} className={styles.link}>
-        <div className={styles.box}>
+        <div
+          className={styles.box}
+          style={{
+            backgroundColor: currentTheme.background,
+            color: currentTheme.color,
+          }}
+        >
           <img className={styles.flagPhoto} src={country.flag} alt="flag" />
           <h2 className={styles.countryName}>{country.name}</h2>
           <p>Capital: {country.capital}</p>
