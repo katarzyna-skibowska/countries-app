@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  font-size: 16px;
+}
+
+.dataBox {
+  padding-left: 30px;
+}
+
+.flag {
+  width: 25em;
+  height: 15em;
+}
+
+.borders {
+  display: inline-block;
+  background-color: hsl(0, 26%, 53%);
+  border-radius: 5px;
+  margin: 0px 4px;
+  padding: 3px;
+}

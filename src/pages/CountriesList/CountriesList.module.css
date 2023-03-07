@@ -1,0 +1,29 @@
+.box {
+  display: inline-block;
+  flex-wrap: wrap;
+  margin: 15px;
+  background-color: hsl(0, 31%, 85%);
+  border: 1px solid hsl(0, 31%, 85%);
+  border-radius: 10px;
+  height: 350px;
+  width: 220px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.flagPhoto {
+  height: 150px;
+  width: 218px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(54, 37, 37);
+  font-size: 14px;
+}
+
+.countryName {
+  text-decoration: none;
+}

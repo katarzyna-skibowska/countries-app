@@ -1,0 +1,14 @@
+.layout {
+  justify-content: space-evenly;
+  display: flex;
+  background-color: hsl(0, 20%, 55%);
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+.modeButton {
+  border: solid 3px hsl(0, 26%, 53%);
+  border-radius: 15px;
+  margin-top: 20px;
+  height: 3em;
+}
